@@ -1,0 +1,33 @@
+package com.jpasolutions.mapreduce;
+
+import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
+import org.apache.hadoop.mapreduce.Reducer;
+
+import java.io.IOException;
+
+/**
+ * Created by nrelate on 24/4/15.
+ */
+public class WCReducerUsingSideDataDistributionInConfiguration extends Reducer<Text,LongWritable,Text,LongWritable> {
+
+    // setup method invoked only once
+    public void setup(Context ctx) throws IOException {
+        // Retrieve the value set in configuration object and display in counter
+        ctx.getCounter("Today value",ctx.getConfiguration().get("today")).increment(1);
+    }
+
+    // reduce method invoked for every distinct key
+    public void reduce(Text key,Iterable<LongWritable> values,Context ctx) throws IOException, InterruptedException {
+        // initialize the variable sum
+        long sum=0;
+
+        // Iterate the list of values for the key and sum it
+        for(LongWritable value:values){
+            sum = sum + value.get();
+        }
+
+        // In the end you got the word(as key) and corresponding count(as sum). Write to ctx object.
+        ctx.write(key,new LongWritable(sum));
+    }
+}

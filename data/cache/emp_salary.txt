@@ -1,0 +1,5 @@
+raja 10000
+mani 20000
+kavi 30000
+kalai 5000
+bala 50000	
