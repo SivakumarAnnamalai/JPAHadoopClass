@@ -1,4 +1,4 @@
-package com.jpasolutions.keyword;
+package com.jpasolutions.advancedMR.keyword;
 
 import com.jpasolutions.advancedMR.secondarySorting.Student;
 import org.apache.hadoop.io.WritableComparable;

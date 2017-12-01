@@ -1,4 +1,4 @@
-package com.jpasolutions.keyword;
+package com.jpasolutions.advancedMR.keyword;
 
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
