@@ -1,7 +1,7 @@
 package com.jpasolutions.drivers;
 
-import com.jpasolutions.wordcount.WCMapper;
-import com.jpasolutions.mapreduce.WCReducerUsingSideDataDistributionInConfiguration;
+import com.jpasolutions.mappers.WCMapper;
+import com.jpasolutions.reducers.WCReducerUsingSideDataDistributionInConfiguration;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.LongWritable;

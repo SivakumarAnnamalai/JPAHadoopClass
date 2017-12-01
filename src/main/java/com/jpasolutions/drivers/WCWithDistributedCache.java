@@ -1,7 +1,7 @@
 package com.jpasolutions.drivers;
 
-import com.jpasolutions.wordcount.WCMapper;
-import com.jpasolutions.mapreduce.WCReducerUsingDistributedCache;
+import com.jpasolutions.mappers.WCMapper;
+import com.jpasolutions.reducers.WCReducerUsingDistributedCache;
 import org.apache.hadoop.filecache.DistributedCache;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.LongWritable;
@@ -21,7 +21,7 @@ import java.net.URISyntaxException;
  */
 public class WCWithDistributedCache {
         public static void main(String args[]) throws IOException, ClassNotFoundException, InterruptedException, URISyntaxException {
-            Job job = new Job();
+            Job job = Job.getInstance();
 
             // Input and Output formats
             job.setInputFormatClass(TextInputFormat.class);

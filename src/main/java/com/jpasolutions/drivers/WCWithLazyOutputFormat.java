@@ -1,7 +1,7 @@
 package com.jpasolutions.drivers;
 
-import com.jpasolutions.wordcount.WCMapper;
-import com.jpasolutions.mapreduce.WCReducerUsingLazyOutputFormat;
+import com.jpasolutions.mappers.WCMapper;
+import com.jpasolutions.reducers.WCReducerUsingLazyOutputFormat;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
@@ -22,7 +22,7 @@ public class WCWithLazyOutputFormat {
         public static void main(String args[])
                 throws IOException, ClassNotFoundException,
                 InterruptedException {
-            Job job = new Job();
+            Job job = Job.getInstance();
 
             // Input and Output formats
             job.setInputFormatClass(TextInputFormat.class);

@@ -1,6 +1,6 @@
 package com.jpasolutions.drivers;
 
-import com.jpasolutions.wordcount.WCReducer;
+import com.jpasolutions.reducers.WCReducer;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
@@ -20,7 +20,7 @@ public class WCWithIdentityMapper {
         public static void main(String args[])
                 throws IOException, ClassNotFoundException,
                 InterruptedException {
-            Job job = new Job();
+            Job job = Job.getInstance();
 
             // Input and Output formats
             job.setInputFormatClass(TextInputFormat.class);

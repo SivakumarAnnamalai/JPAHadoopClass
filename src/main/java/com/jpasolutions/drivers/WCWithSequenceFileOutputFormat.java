@@ -1,7 +1,7 @@
 package com.jpasolutions.drivers;
 
-import com.jpasolutions.wordcount.WCMapper;
-import com.jpasolutions.wordcount.WCReducer;
+import com.jpasolutions.mappers.WCMapper;
+import com.jpasolutions.reducers.WCReducer;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
@@ -19,7 +19,7 @@ import java.io.IOException;
 public class WCWithSequenceFileOutputFormat {
 
         public static void main(String args[]) throws IOException, ClassNotFoundException, InterruptedException {
-            Job job = new Job();
+            Job job = Job.getInstance();
 
             // Input format
             job.setInputFormatClass(TextInputFormat.class);

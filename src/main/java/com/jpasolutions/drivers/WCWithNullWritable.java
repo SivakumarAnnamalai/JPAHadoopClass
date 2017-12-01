@@ -1,7 +1,7 @@
 package com.jpasolutions.drivers;
 
-import com.jpasolutions.mapreduce.WCMapperUsingNullWritable;
-import com.jpasolutions.mapreduce.WCReducerUsingNullWritable;
+import com.jpasolutions.mappers.WCMapperUsingNullWritable;
+import com.jpasolutions.reducers.WCReducerUsingNullWritable;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.NullWritable;
@@ -21,7 +21,7 @@ public class WCWithNullWritable {
         public static void main(String args[])
                 throws IOException, ClassNotFoundException,
                 InterruptedException {
-            Job job = new Job();
+            Job job = Job.getInstance();
 
             // Input and Output formats
             job.setInputFormatClass(TextInputFormat.class);

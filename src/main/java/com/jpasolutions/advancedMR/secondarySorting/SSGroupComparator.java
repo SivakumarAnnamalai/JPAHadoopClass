@@ -1,14 +1,13 @@
-package com.jpasolutions.keyword;
+package com.jpasolutions.advancedMR.secondarySorting;
 
-import com.jpasolutions.advancedMR.secondarySorting.Student;
 import org.apache.hadoop.io.WritableComparable;
 import org.apache.hadoop.io.WritableComparator;
 
 /**
  * Created by Sivakumar on 2/6/15.
  */
-public class KeywordGroupComparator extends WritableComparator {
-    protected KeywordGroupComparator(){
+public class SSGroupComparator extends WritableComparator {
+    protected SSGroupComparator(){
         super(Student.class,true);
     }
 

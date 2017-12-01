@@ -1,7 +1,7 @@
 package com.jpasolutions.drivers;
 
-import com.jpasolutions.wordcount.WCMapper;
-import com.jpasolutions.wordcount.WCReducer;
+import com.jpasolutions.mappers.WCMapper;
+import com.jpasolutions.reducers.WCReducer;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.conf.Configured;
 import org.apache.hadoop.fs.Path;
