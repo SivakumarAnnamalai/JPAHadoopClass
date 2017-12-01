@@ -8,7 +8,7 @@ import org.apache.hadoop.mapreduce.Reducer;
 import java.io.IOException;
 
 /**
- * Created by nrelate on 28/6/15.
+ * Created by Sivakumar on 28/6/15.
  */
 public class StudentMapper extends Mapper<LongWritable,Text,Text,LongWritable> {
 

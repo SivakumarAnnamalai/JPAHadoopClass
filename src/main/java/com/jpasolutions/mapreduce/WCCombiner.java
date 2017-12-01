@@ -7,11 +7,11 @@ import org.apache.hadoop.mapreduce.Reducer;
 import java.io.IOException;
 
 /**
- * Created by nrelate on 24/4/15.
+ * Created by Sivakumar on 24/4/15.
  */
 
 public class WCCombiner extends Reducer<Text,LongWritable,Text,LongWritable> {
-    public void reduce(Text key,Iterable<LongWritable> values,Context ctx) throws IOException, InterruptedException {
+    public void reduce(Text key,Iterable<LongWritable> values,Context context) throws IOException, InterruptedException {
         // initialize the variable sum
         long sum=0;
 
@@ -20,7 +20,7 @@ public class WCCombiner extends Reducer<Text,LongWritable,Text,LongWritable> {
             sum = sum + value.get();
         }
 
-        // In the end you got the word(as key) and corresponding count(as sum). Write to ctx object.
-        ctx.write(key,new LongWritable(sum));
+        // In the end you got the word(as key) and corresponding count(as sum). Write to context object.
+        context.write(key,new LongWritable(sum));
     }
 }

@@ -12,7 +12,7 @@ import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import java.io.IOException;
 
 /**
- * Created by nrelate on 18/6/15.
+ * Created by Sivakumar on 18/6/15.
  */
 public class WholeFileInputFormat extends FileInputFormat<NullWritable,BytesWritable> {
 

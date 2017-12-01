@@ -8,10 +8,10 @@ import org.apache.hadoop.mapreduce.Reducer;
 import java.io.IOException;
 
 /**
- * Created by nrelate on 24/4/15.
+ * Created by Sivakumar on 24/4/15.
  */
 public class WCReducerUsingNullWritable extends Reducer<NullWritable,LongWritable,NullWritable,LongWritable> {
-    public void reduce(NullWritable key,Iterable<LongWritable> values,Context ctx) throws IOException, InterruptedException {
+    public void reduce(NullWritable key,Iterable<LongWritable> values,Context context) throws IOException, InterruptedException {
         // initialize the variable sum
         long sum=0;
 
@@ -20,7 +20,7 @@ public class WCReducerUsingNullWritable extends Reducer<NullWritable,LongWritabl
             sum = sum + value.get();
         }
 
-        // In the end you got the word(as key) and corresponding count(as sum). Write to ctx object.
-        ctx.write(NullWritable.get(),new LongWritable(sum));
+        // In the end you got the word(as key) and corresponding count(as sum). Write to context object.
+        context.write(NullWritable.get(),new LongWritable(sum));
     }
 }

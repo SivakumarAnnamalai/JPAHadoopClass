@@ -4,7 +4,7 @@ import org.apache.hadoop.io.WritableComparable;
 import org.apache.hadoop.io.WritableComparator;
 
 /**
- * Created by nrelate on 2/6/15.
+ * Created by Sivakumar on 2/6/15.
  */
 public class StudentKeyComparator extends WritableComparator {
     protected StudentKeyComparator(){

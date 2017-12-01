@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.net.URISyntaxException;
 
 /**
- * Created by nrelate on 19/4/15.
+ * Created by Sivakumar on 19/4/15.
  */
 public class EmpWithReduceSideJoin {
         public static void main(String args[]) throws IOException, ClassNotFoundException, InterruptedException, URISyntaxException {

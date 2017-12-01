@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 
 /**
- * Created by nrelate on 21/4/15.
+ * Created by Sivakumar on 21/4/15.
  */
 public class SerializeVsWritable {
     public static void main(String[] args) throws IOException {

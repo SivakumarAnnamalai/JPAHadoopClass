@@ -7,7 +7,7 @@ import org.apache.hadoop.mapreduce.Mapper;
 import java.io.IOException;
 
 /**
- * Created by nrelate on 20/6/15.
+ * Created by Sivakumar on 20/6/15.
  */
 public class KeywordMapper extends Mapper<LongWritable,Text,Text,Text> {
     public void map(LongWritable key,Text value,Context context) throws IOException, InterruptedException {

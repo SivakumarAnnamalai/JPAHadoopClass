@@ -1,7 +1,7 @@
 package com.jpasolutions.db;
 
 /**
- * Created by nrelate on 26/4/15.
+ * Created by Sivakumar on 26/4/15.
  */
 import java.io.DataInput;
 import java.io.DataOutput;

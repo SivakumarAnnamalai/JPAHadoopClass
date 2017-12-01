@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.Iterator;
 
 /**
- * Created by nrelate on 29/4/15.
+ * Created by Sivakumar on 29/4/15.
  */
 public class SSReducer extends Reducer<Student,NullWritable,Text,NullWritable> {
     public void reduce(Student key,Iterable<NullWritable> values,Context context) throws IOException, InterruptedException {

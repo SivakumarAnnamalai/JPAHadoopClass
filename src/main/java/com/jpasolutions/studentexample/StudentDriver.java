@@ -1,7 +1,5 @@
 package com.jpasolutions.studentexample;
 
-import com.jpasolutions.mapreduce.WCMapper;
-import com.jpasolutions.mapreduce.WCReducer;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
@@ -14,7 +12,7 @@ import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 import java.io.IOException;
 
 /**
- * Created by nrelate on 19/4/15.
+ * Created by Sivakumar on 19/4/15.
  */
 public class StudentDriver {
 

@@ -5,7 +5,7 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Partitioner;
 
 /**
- * Created by nrelate on 24/4/15.
+ * Created by Sivakumar on 24/4/15.
  */
 public class WCPartitioner extends Partitioner<Text,LongWritable> {
 

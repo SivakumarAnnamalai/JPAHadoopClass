@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 /**
- * Created by nrelate on 26/4/15.
+ * Created by Sivakumar on 26/4/15.
  */
 public class PropertiesTest {
     public static void main(String args[]) throws IOException {
@@ -15,7 +15,7 @@ public class PropertiesTest {
 
 
 
-        String filename = "/home/nrelate/workspace/JPAHadoopClass/src/main/resources/test.tsv";
+        String filename = "/home/Sivakumar/workspace/JPAHadoopClass/src/main/resources/test.tsv";
         Properties properties = new Properties();
         FileInputStream fileInputStream = new FileInputStream(filename);
         properties.load(fileInputStream);

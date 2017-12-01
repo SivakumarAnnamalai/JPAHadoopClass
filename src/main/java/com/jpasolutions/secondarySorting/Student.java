@@ -10,7 +10,7 @@ import java.io.DataOutput;
 import java.io.IOException;
 
 /**
- * Created by nrelate on 24/4/15.
+ * Created by Sivakumar on 24/4/15.
  */
 public class Student implements WritableComparable<Student> {
     private Text studentName;

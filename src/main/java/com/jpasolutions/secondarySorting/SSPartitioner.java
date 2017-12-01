@@ -5,7 +5,7 @@ import org.apache.hadoop.io.NullWritable;
 import org.apache.hadoop.mapreduce.Partitioner;
 
 /**
- * Created by nrelate on 29/4/15.
+ * Created by Sivakumar on 29/4/15.
  */
 public class SSPartitioner extends Partitioner<Student,NullWritable> {
 

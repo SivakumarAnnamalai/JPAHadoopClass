@@ -1,7 +1,7 @@
-package com.jpasolutions.invokers;
+package com.jpasolutions.drivers;
 
-import com.jpasolutions.mapreduce.WCMapper;
-import com.jpasolutions.mapreduce.WCReducer;
+import com.jpasolutions.wordcount.WCMapper;
+import com.jpasolutions.mapreduce.WCReducerUsingLazyOutputFormat;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
@@ -15,9 +15,9 @@ import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
 import java.io.IOException;
 
 /**
- * Created by nrelate on 19/4/15.
+ * Created by Sivakumar on 19/4/15.
  */
-public class Wordcount {
+public class WCWithLazyOutputFormat {
 
         public static void main(String args[])
                 throws IOException, ClassNotFoundException,
@@ -32,8 +32,8 @@ public class Wordcount {
 
             // Mapper,Reducer and Invoker classes
             job.setMapperClass(WCMapper.class);
-            job.setReducerClass(WCReducer.class);
-            job.setJarByClass(Wordcount.class);
+            job.setReducerClass(WCReducerUsingLazyOutputFormat.class);
+            job.setJarByClass(WCWithLazyOutputFormat.class);
 
             // set input and output path details, Output path should not exist.
             FileInputFormat.addInputPath(job, new Path(args[0]));
@@ -45,6 +45,7 @@ public class Wordcount {
 
             job.setMapOutputKeyClass(Text.class);
             job.setMapOutputValueClass(LongWritable.class);
+            job.setNumReduceTasks(3);
 
             //job.getConfiguration().set("today","VERY_HIGH");
             // submit the job and wait for the completion

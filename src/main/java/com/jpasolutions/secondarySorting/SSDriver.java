@@ -13,7 +13,7 @@ import org.apache.hadoop.util.ToolRunner;
 import javax.security.auth.login.Configuration;
 
 /**
- * Created by nrelate on 2/6/15.
+ * Created by Sivakumar on 2/6/15.
  */
 public class SSDriver extends Configured implements Tool {
 

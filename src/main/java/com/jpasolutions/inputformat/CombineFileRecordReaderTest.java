@@ -15,7 +15,7 @@ import org.apache.hadoop.util.LineReader;
 import java.io.IOException;
 
 /**
- * Created by nrelate on 18/6/15.
+ * Created by Sivakumar on 18/6/15.
  */
 public class CombineFileRecordReaderTest extends RecordReader<LongWritable, Text> {
     private LongWritable key;

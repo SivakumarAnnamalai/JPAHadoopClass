@@ -1,7 +1,7 @@
 package com.jpasolutions.db;
 
 /**
- * Created by nrelate on 26/4/15.
+ * Created by Sivakumar on 26/4/15.
  */
 import java.io.IOException;
 import org.apache.hadoop.mapreduce.Mapper;
@@ -13,7 +13,7 @@ public class DBMapper extends Mapper<LongWritable, DBInputWritable, Text, IntWri
 {
     private IntWritable one = new IntWritable(1);
 
-    protected void map(LongWritable id, DBInputWritable value, Context ctx)
+    protected void map(LongWritable id, DBInputWritable value, Context context)
     {
         try
         {
@@ -21,7 +21,7 @@ public class DBMapper extends Mapper<LongWritable, DBInputWritable, Text, IntWri
 
             for(String key : keys)
             {
-                ctx.write(new Text(key),one);
+                context.write(new Text(key),one);
             }
         } catch(IOException e)
         {

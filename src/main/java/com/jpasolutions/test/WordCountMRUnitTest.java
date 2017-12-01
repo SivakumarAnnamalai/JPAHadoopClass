@@ -1,7 +1,7 @@
 package com.jpasolutions.test;
 
-import com.jpasolutions.mapreduce.WCMapper;
-import com.jpasolutions.mapreduce.WCReducer;
+import com.jpasolutions.wordcount.WCMapper;
+import com.jpasolutions.wordcount.WCReducer;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mrunit.mapreduce.MapDriver;
@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by nrelate on 24/4/15.
+ * Created by Sivakumar on 24/4/15.
  */
 public class WordCountMRUnitTest {
     MapDriver<LongWritable, Text, Text, LongWritable> mapDriver;

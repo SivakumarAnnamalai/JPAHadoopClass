@@ -8,11 +8,11 @@ import org.apache.hadoop.mapreduce.Reducer;
 import java.io.IOException;
 
 /**
- * Created by nrelate on 26/4/15.
+ * Created by Sivakumar on 26/4/15.
  */
 public class DBReducer extends Reducer<Text, IntWritable, DBOutputWritable, NullWritable>
 {
-    protected void reduce(Text key, Iterable<IntWritable> values, Context ctx)
+    protected void reduce(Text key, Iterable<IntWritable> values, Context context)
     {
         int sum = 0;
 
@@ -23,7 +23,7 @@ public class DBReducer extends Reducer<Text, IntWritable, DBOutputWritable, Null
 
         try
         {
-            ctx.write(new DBOutputWritable(key.toString(), sum), NullWritable.get());
+            context.write(new DBOutputWritable(key.toString(), sum), NullWritable.get());
         } catch(IOException e)
         {
             e.printStackTrace();

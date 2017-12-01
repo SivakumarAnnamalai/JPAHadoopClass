@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 /**
- * Created by nrelate on 24/4/15.
+ * Created by Sivakumar on 24/4/15.
  */
 public class EmpMapperUsingMapsideJoin extends
         Mapper<LongWritable,Text,Text,NullWritable> {
@@ -20,8 +20,8 @@ public class EmpMapperUsingMapsideJoin extends
     String cacheFileName = "/cache/emp_salary.txt";
     String cacheFileLocation;
 
-    public void setup(Context ctx) throws IOException {
-        Path paths[] = DistributedCache.getLocalCacheFiles(ctx.getConfiguration());
+    public void setup(Context context) throws IOException {
+        Path paths[] = DistributedCache.getLocalCacheFiles(context.getConfiguration());
         for(Path path:paths){
             if(path.toString().contains(cacheFileName)){
                 cacheFileLocation = path.toString();
@@ -32,7 +32,7 @@ public class EmpMapperUsingMapsideJoin extends
     }
 
 
-    public void map(LongWritable key,Text value,Context ctx)
+    public void map(LongWritable key,Text value,Context context)
             throws IOException, InterruptedException {
         // Split the record delimited by Space,
         String emp[] = value.toString().split(" ");
@@ -42,6 +42,6 @@ public class EmpMapperUsingMapsideJoin extends
 
         Text finalData = new Text(value.toString()+" "+salary);
 
-        ctx.write(finalData, NullWritable.get());
+        context.write(finalData, NullWritable.get());
     }
 }

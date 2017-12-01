@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.net.URI;
 
 /**
- * Created by nrelate on 26/4/15.
+ * Created by Sivakumar on 26/4/15.
  */
 public class SequenceFileReadTest {
     public static void main(String args[]) throws IOException {
