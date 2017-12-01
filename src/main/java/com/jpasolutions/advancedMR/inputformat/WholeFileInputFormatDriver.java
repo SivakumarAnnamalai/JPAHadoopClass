@@ -1,10 +1,9 @@
-package com.jpasolutions.inputformat;
+package com.jpasolutions.advancedMR.inputformat;
 
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.BytesWritable;
 import org.apache.hadoop.io.NullWritable;
 import org.apache.hadoop.mapreduce.Job;
-import org.apache.hadoop.mapreduce.lib.input.CombineFileInputFormat;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.mapreduce.lib.output.TextOutputFormat;
@@ -14,27 +13,29 @@ import java.io.IOException;
 /**
  * Created by Sivakumar on 19/4/15.
  */
-public class CombineFileInputFormatDriver {
+public class WholeFileInputFormatDriver {
 
         public static void main(String args[])
                 throws IOException, ClassNotFoundException,
                 InterruptedException {
-            Job job = new Job();
+            Job job = Job.getInstance();
 
             // Input and Output formats
-            job.setInputFormatClass(CombineFileInputFormat.class);
+            job.setInputFormatClass(WholeFileInputFormat.class);
             job.setOutputFormatClass(TextOutputFormat.class);
 
             // Mapper,Reducer and Invoker classes
-            job.setJarByClass(CombineFileInputFormatDriver.class);
+            //job.setMapperClass(WCMapper.class);
+            //job.setReducerClass(WCReducer.class);
+            job.setJarByClass(WholeFileInputFormatDriver.class);
 
             // set input and output path details, Output path should not exist.
             FileInputFormat.addInputPath(job, new Path(args[0]));
             FileOutputFormat.setOutputPath(job, new Path(args[1]));
 
             // set output key and value types
-            //job.setOutputKeyClass(NullWritable.class);
-            //job.setOutputValueClass(BytesWritable.class);
+            job.setOutputKeyClass(NullWritable.class);
+            job.setOutputValueClass(BytesWritable.class);
 
             job.getConfiguration().set("mapred.child.java.opts","-Xmx1G");
 

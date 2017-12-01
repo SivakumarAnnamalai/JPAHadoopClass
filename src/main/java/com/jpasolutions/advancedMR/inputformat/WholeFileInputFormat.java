@@ -1,4 +1,4 @@
-package com.jpasolutions.inputformat;
+package com.jpasolutions.advancedMR.inputformat;
 
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.BytesWritable;

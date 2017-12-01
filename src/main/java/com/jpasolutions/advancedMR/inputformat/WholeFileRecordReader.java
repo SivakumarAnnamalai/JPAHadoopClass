@@ -1,4 +1,4 @@
-package com.jpasolutions.inputformat;
+package com.jpasolutions.advancedMR.inputformat;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FSDataInputStream;
