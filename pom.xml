@@ -7,12 +7,6 @@
     <groupId>MR</groupId>
     <artifactId>MR</artifactId>
     <version>1.0</version>
-    <repositories>
-        <repository>
-            <id>local-maven-repo</id>
-            <url>file:///${project.basedir}/repo</url>
-        </repository>
-    </repositories>
     <build>
         <plugins>
             <plugin>
