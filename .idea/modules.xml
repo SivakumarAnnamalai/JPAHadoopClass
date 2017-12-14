@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/JPAHadoopClass.iml" filepath="$PROJECT_DIR$/JPAHadoopClass.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MR.iml" filepath="$PROJECT_DIR$/MR.iml" />
     </modules>
   </component>
 </project>
